@@ -1,0 +1,247 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #36374C;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: var(--Dark-Slate-Grey);
+    position: relative;
+}
+
+.form {
+    width: 630px;
+    height: 450px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+}
+
+.text-container {
+    width: 50%;
+    padding: 30px 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.form-subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon-list {
+    width: 14px;
+    margin-right: 10px;
+}
+
+.list p {
+    font-size: 11px;
+}
+
+.email-label {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.email {
+    font-size: 10px;
+    font-weight: 700;
+    color: #000;
+}
+
+
+.email-input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.error-msg {
+    font-size: 10px;
+    font-weight: 700;
+    color: red;
+    display: none;
+}
+
+.correct {
+    border: 1px solid green;
+    background-color: #00800036;
+}
+
+.error {
+    color: red;
+    background-color: #ff000026;
+    border: 1px solid red;
+}
+
+
+.cta{
+    width: 100%;
+    padding: 14px;
+    background-color: #23263A;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-cta:hover {
+    background: linear-gradient(90deg, #FF5574 0%, #ff6347 100%);
+    box-shadow: 
+                 5px  10px  15px  0px  #ff557462, /* right */
+                -5px  10px  15px  0px  #ff634756 ;
+    cursor: pointer;            
+}
+
+.img-container {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.form-img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.form-img-mobile {
+    display: none;
+}
+
+/* Popup Success */
+
+.popup-success {
+    width: 350px;
+    height: 350px;
+    background-color: #fff;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: absolute;
+    transform: scale( 0.1);
+    transition: transform 0.4s;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.icon-success {
+    width: 45px;
+    margin-bottom: 20px;
+}
+
+.title-success {
+    font-size: 35px;
+    margin-bottom: 18px;
+    line-height: 35px;
+}
+
+.text-success {
+    font-size: 12px;
+    margin-bottom: 25px;
+    line-height: 17px;
+}
+
+.text-success span {
+    font-weight: 700;
+}
+
+.cta-success:hover {
+    background: linear-gradient(90deg, #FF5574 0%, #ff6347 100%);
+    box-shadow: 
+                  2px  5px  18px  0px  #ff557462, /* right */   
+                 -2px  5px  18px  0px  #ff634756;
+    cursor: pointer;  
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 630px) {
+    .form {
+        max-width: 350px;
+        height: auto;
+        flex-direction: column-reverse;
+        overflow: hidden;
+        padding: unset;
+    }
+    
+
+    .img-container {
+       width: 100%;
+    }
+
+    .form-img {
+      display: none;
+    }
+
+    .form-img-mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-container {
+        width: 100%
+    }
+
+    /* POPUP */
+
+    .popup-success {
+        width: 330px;
+        height: 700px;
+        flex-direction: column;
+        border-radius: unset;
+    }
+
+    .icon-success{
+        width: 64px;
+        margin-top: 100px;
+    }
+
+    .cta-success {
+        margin-top: 85%;
+    }
+
+  }
